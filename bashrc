@@ -87,5 +87,5 @@ alias mpvrq='mpv --really-quiet'
 alias wip='curl ipinfo.io/ip'
 
 # Rsync aliases
-alias psn='rsync -rv --info=progress2 notes/ vps2://home/fxleblanc/notes/'
-alias pln='rsync -rv --info=progress2 notes/ vps2://home/fxleblanc/notes/'
+alias psn='cd ~/notes/ && git add . && git commit -m "$(date)" && git push origin master'
+alias pln='cd ~/notes && git pull origin master'
