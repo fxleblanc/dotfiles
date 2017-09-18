@@ -89,3 +89,16 @@ alias wip='curl ipinfo.io/ip'
 # Rsync aliases
 alias psn='cd ~/notes/ && git add . && git commit -m "$(date)" && git push origin master'
 alias pln='cd ~/notes && git pull origin master'
+
+# Generate password
+function pgn {
+    < /dev/urandom tr -dc '!@#$%A-Z-a-z-0-9' | head -c$1
+}
+
+# Mount and create directory if it doesn't exist
+function dmount {
+    if [ ! -d $2 ]; then
+        sudo mkdir $2
+    fi
+    sudo mount $1 $2
+}
