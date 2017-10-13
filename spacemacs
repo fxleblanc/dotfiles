@@ -306,6 +306,17 @@ values."
    dotspacemacs-whitespace-cleanup nil
    ))
 
+(defun dotspacemacs/linum-relative-yank ()
+  "Show relative numbering temporarily when yanking"
+  (interactive)
+  (linum-relative-on)
+  (unwind-protect
+      (progn
+        (linum-mode 1)
+        (call-interactively 'evil-yank))
+    (linum-mode -1))
+  )
+
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
@@ -322,6 +333,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
                                    auto-completion-enable-help-tooltip t)))
   (add-to-list 'auto-mode-alist '("\\.ctp$" . php-mode))
   (setq magit-repository-directories '("~/git/"))
+  (global-set-key [remap evil-yank] 'dotspacemacs/linum-relative-yank)
   )
 
 (defun dotspacemacs/user-config ()
