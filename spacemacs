@@ -321,6 +321,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
                 '((auto-completion :variables
                                    auto-completion-enable-help-tooltip t)))
   (add-to-list 'auto-mode-alist '("\\.ctp$" . php-mode))
+  (setq magit-repository-directories '("~/git/"))
   )
 
 (defun dotspacemacs/user-config ()
