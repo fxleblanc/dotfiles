@@ -88,8 +88,8 @@ alias mpvrq='mpv --really-quiet'
 alias wip='curl ipinfo.io/ip'
 
 # Rsync aliases
-alias psn='cd ~/notes/ && git add . && git commit -m "$(date)" && git push origin master'
-alias pln='cd ~/notes && git pull origin master'
+alias psn='git -C ~/notes add . && git -C ~/notes commit -m "$(date)" && git -C ~/notes push origin master'
+alias pln='git -C ~/notes pull origin master'
 
 # Generate password
 function pgn {
