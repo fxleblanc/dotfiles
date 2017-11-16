@@ -60,6 +60,7 @@ alias gdc='git diff --cached'
 alias gl='git log'
 alias gco='git checkout'
 alias gcob='git checkout -b'
+alias gr='git rebase'
 
 # Youtube-dl aliases
 alias ydl='youtube-dl'
@@ -103,3 +104,7 @@ function dmount {
     fi
     sudo mount $1 $2
 }
+
+# Hadoop installation
+export HADOOP_HOME=/home/fxleblanc/Documents/Hadoop/hadoop-2.8.2
+export PATH=$PATH:$HADOOP_HOME/bin
