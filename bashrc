@@ -108,3 +108,9 @@ function dmount {
 # Hadoop installation
 export HADOOP_HOME=/home/fxleblanc/Documents/Hadoop/hadoop-2.8.2
 export PATH=$PATH:$HADOOP_HOME/bin
+
+# Steam with wine
+alias steam-wine='wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe >/dev/null 2>&1'
+
+# Emscripten sdk
+export PATH=$PATH:/usr/lib/emsdk/emscripten/1.37.22/
